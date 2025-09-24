@@ -138,7 +138,7 @@ const projects = [
       "/screenshots/Natours-screenshot-1.jpg",
       "/screenshots/Natours-screenshot-2.jpg",
     ],
-    repoLink: "https://github.com/Mhmd-abi-hachem/natours-mern",
+    repoLink: "https://github.com/Mhmd-abi-hachem/natours-e-commerce-mern",
     link: "https://app-natours.vercel.app",
   },
   {

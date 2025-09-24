@@ -26,7 +26,7 @@ function FooterLinks() {
       </div>
 
       <div className="self-center md:self-start text-center md:text-end text-[1.5rem] sm:text-[1.7rem] text-[#e5e7df]">
-        <p>&copy;Mohamad Abi Hachem 2025.</p>
+        <p>&copy; Mohamad Abi Hachem 2025.</p>
       </div>
     </div>
   );
