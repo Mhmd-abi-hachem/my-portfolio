@@ -1,0 +1,187 @@
+.animated-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.animated-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1.55px;
+  bottom: -6px;
+  left: 0;
+  background-color: #f7f7f7;
+  transition: width 0.2s ease-in-out;
+}
+
+.animated-link--nav::after {
+  background-color: #4e4e4e;
+}
+
+.animated-link:hover::after {
+  width: 100%;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateY(0);
+  }
+}
+.navbar-slide-down {
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateX(0);
+  }
+}
+
+.subheader-slide-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.header-left-delay {
+  animation: slideInLeft 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-indicator-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 1.1s;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease-out;
+  z-index: 9999;
+}
+
+.custom-cursor.active {
+  opacity: 1;
+}
+
+.header-line {
+  position: relative;
+  border-bottom: none;
+}
+
+.header-line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #99a1af;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.aos-animate.header-line::after {
+  transform: scaleX(1);
+  transition: transform 1.5s cubic-bezier(0.5, 0, 0, 1);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.drawer-open {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.drawer-close {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.backdrop-open {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.backdrop-close {
+  animation: fadeOut 0.3s ease-out forwards;
+}

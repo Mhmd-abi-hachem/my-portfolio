@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  color: #1e1e1e;
+  background-color: #e5e7df;
+  overflow-x: hidden;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+body.lock-scroll {
+  overflow: hidden;
+}
